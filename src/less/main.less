@@ -1,38 +1,189 @@
 @import (less) '../../node_modules/normalize.css/normalize.css';
 @import (less) '_media.less';
 
-body {
-    background: blue;
-}
+@roboto : 'Roboto', sans-serif;
+@sans: 'PT Sans', sans-serif;
+@lobster: 'Lobster', cursive;
+@comfortaa: 'Comfortaa', cursive;
+@cuprum: 'Cuprum', sans-serif;
+@caption: 'PT Sans Caption', sans-serif;
+@brown: #9a5020;
+@cream: #fdfce8;
+@orange: #f9b042;
+@oranger: #ff9900;
+@bg: #fdfaf7;
+@brown-light: #a66338;
+@black: #1d1d1d;
 
-// Стили для всех девайсов (все @media-запросы) пишутся внитри блока
-.menu {
+
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    text-align: center;
-    background: red;
+}
 
-    @media @tablet {
-        background: green;
-    }
+html {
+    font-size: 10px;
+    font-family: @comfortaa;
 
-    @media @desktop {
-        background: blue;
-    }
 
-    // Пример стилей для элемента `.menu__item`
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: url('../img/bg-header.jpg')  no-repeat center top /cover;
+  height: 100vh;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.menu {
     &__item {
-        display: inline-block;
-        list-style-type: none;
+        display: inline;
+        font-size: 2.4rem;
+        &:first-child {
+          margin-right: 10rem;
+        }
+        & > a {
+          color: black;
+          text-decoration: none;
+        }
+        &:hover {
+          border-bottom: 2px solid black;
+        }
     }
+}
 
-    // Пример модификатора `.menu_bottom`
-    &_bottom {
-        background: green;
-    }
+.logo {
+    position: absolute;
+    left: 50%;
+    top: 2rem;
+    margin-left: -12rem;
+    width: 24rem;
+    &  img {
+        max-width: 100%;
+        filter: drop-shadow(5px 5px 5px black);
 
-    // Пример переопределения стилей элемента в нижнем меню `.menu_bottom .menu__item`
-    &_bottom &__item {
-        color: #f00;
     }
+}
+
+.phone-number {
+    font-size: 2.4rem;
+}
+
+.heading {
+    background-color: @bg;
+    height: 12rem;
+    // border-bottom: 4px solid @orange;
+    margin: 0 2.5rem 0 2.5rem;
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    &__wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      width: 85%;
+      margin: 0 auto;
+    }
+}
+
+.slogan {
+  margin: 0 auto;
+  font-family: @cuprum;
+  text-align: center;
+  width: 60%;
+  font-size: 7.2rem;
+  color: @bg;
+  text-shadow: 2px 1px 5px rgba(150, 150, 150, 1);
+}
+
+.button-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+.button {
+  color: @bg;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.4rem;
+  background-color: @orange;
+  border-radius: 10rem;
+  width: 22.5rem;
+  height: 7rem;
+
+  &:hover {
+    cursor: pointer;
+    background: @oranger;
+    color: @black;
+  }
+
+  &_secondary {
+    background-color: @cream;
+    border: 3px solid @orange;
+    color: @black;
+    &:hover{
+      color: #000;
+      border-color: @oranger;
+      background: @cream;
+    }
+  }
+}
+
+.about-us {
+  height: 100vh;
+  padding-top: 2rem;
+  background-color: @bg;
+}
+
+.section-title {
+  font-size: 3.2rem;
+  margin: 1rem 0 1rem 0;
+  border-bottom: 2px solid @brown;
+}
+
+.advantages {
+  display: flex;
+  justify-content: space-around;
+}
+
+.feature {
+  width: 20rem;
+
+  &__icon {
+    width: 200px;
+    height: 200px;
+    border: 2px solid @brown;
+  }
+
+  &__title {
+    font-size: 3rem;
+    font-family: @cuprum;
+  }
+
+  &__discription {
+    font-size: 2rem;
+  }
+
+}
+
+footer {
+  background-color: @cream;
+}
+
+.footing-top {
+  height: 200px;
+}
+
+.footing-bottom {
+  border-top: 1px solid @brown-light;
+  height: 60px;
 }
