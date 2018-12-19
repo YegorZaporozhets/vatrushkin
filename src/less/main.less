@@ -1,7 +1,7 @@
 @import (less) '../../node_modules/normalize.css/normalize.css';
 @import (less) '_media.less';
 
-@roboto : 'Roboto', sans-serif;
+@roboto: 'Roboto', sans-serif;
 @sans: 'PT Sans', sans-serif;
 @lobster: 'Lobster', cursive;
 @comfortaa: 'Comfortaa', cursive;
@@ -25,36 +25,41 @@
 html {
     font-size: 10px;
     font-family: @comfortaa;
-
-
 }
 
 header {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background: url('../img/bg-header.jpg')  no-repeat center top /cover;
-  height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: url('../img/bg-header.jpg') no-repeat center top /cover;
+    height: 100vh;
+}
+
+.page {
+    position: relative;
 }
 
 .container {
-  width: 85%;
-  margin: 0 auto;
+    width: 85%;
+    margin: 0 auto;
 }
 
 .menu {
     &__item {
         display: inline;
         font-size: 2.4rem;
+
         &:first-child {
-          margin-right: 10rem;
+            margin-right: 10rem;
         }
+
         & > a {
-          color: black;
-          text-decoration: none;
+            color: black;
+            text-decoration: none;
         }
+
         &:hover {
-          border-bottom: 2px solid black;
+            border-bottom: 2px solid black;
         }
     }
 }
@@ -65,10 +70,10 @@ header {
     top: 2rem;
     margin-left: -12rem;
     width: 24rem;
-    &  img {
+
+    & img {
         max-width: 100%;
         filter: drop-shadow(5px 5px 5px black);
-
     }
 }
 
@@ -79,111 +84,119 @@ header {
 .heading {
     background-color: @bg;
     height: 12rem;
-    // border-bottom: 4px solid @orange;
-    margin: 0 2.5rem 0 2.5rem;
+    margin: 0 2.5rem;
     border-bottom-right-radius: 2rem;
     border-bottom-left-radius: 2rem;
+
     &__wrap {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 100%;
-      width: 85%;
-      margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        width: 85%;
+        margin: 0 auto;
     }
 }
 
 .slogan {
-  margin: 0 auto;
-  font-family: @cuprum;
-  text-align: center;
-  width: 60%;
-  font-size: 7.2rem;
-  color: @bg;
-  text-shadow: 2px 1px 5px rgba(150, 150, 150, 1);
+    margin: 0 auto;
+    font-family: @cuprum;
+    text-align: center;
+    width: 60%;
+    font-size: 7.2rem;
+    color: @bg;
+    text-shadow: 2px 1px 5px rgba(150, 150, 150, 1);
 }
 
 .button-wrap {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 4rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
 }
 
 .button {
-  color: @bg;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 2.4rem;
-  background-color: @orange;
-  border-radius: 10rem;
-  width: 22.5rem;
-  height: 7rem;
+    color: @bg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.4rem;
+    background-color: @orange;
+    border-radius: 10rem;
+    width: 22.5rem;
+    height: 7rem;
 
-  &:hover {
-    cursor: pointer;
-    background: @oranger;
-    color: @black;
-  }
-
-  &_secondary {
-    background-color: @cream;
-    border: 3px solid @orange;
-    color: @black;
-    &:hover{
-      color: #000;
-      border-color: @oranger;
-      background: @cream;
+    &:hover {
+        cursor: pointer;
+        background: @oranger;
+        color: @black;
     }
-  }
+
+    &_secondary {
+        background-color: @cream;
+        border: 3px solid @orange;
+        color: @black;
+
+        &:hover {
+            color: #000;
+            border-color: @oranger;
+            background: @cream;
+        }
+    }
 }
 
 .about-us {
-  height: 100vh;
-  padding-top: 2rem;
-  background-color: @bg;
+    height: 100vh;
+    padding-top: 2rem;
+    background-color: @bg;
 }
 
 .section-title {
-  font-size: 3.2rem;
-  margin: 1rem 0 1rem 0;
-  border-bottom: 2px solid @brown;
+    font-size: 3.2rem;
+    margin: 1rem 0;
+    border-bottom: 2px solid @brown;
 }
 
 .advantages {
-  display: flex;
-  justify-content: space-around;
+    display: flex;
+    justify-content: space-around;
 }
 
 .feature {
-  width: 20rem;
+    width: 20rem;
 
-  &__icon {
-    width: 200px;
-    height: 200px;
-    border: 2px solid @brown;
-  }
+    &__icon {
+        width: 200px;
+        height: 200px;
+        border: 2px solid @brown;
+    }
 
-  &__title {
-    font-size: 3rem;
-    font-family: @cuprum;
-  }
+    &__title {
+        font-size: 3rem;
+        font-family: @cuprum;
+    }
 
-  &__discription {
-    font-size: 2rem;
-  }
-
+    &__discription {
+        font-size: 2rem;
+    }
 }
 
 footer {
-  background-color: @cream;
+    background-color: @cream;
 }
 
 .footing-top {
-  height: 200px;
+    height: 200px;
 }
 
 .footing-bottom {
-  border-top: 1px solid @brown-light;
-  height: 60px;
+    border-top: 1px solid @brown-light;
+    height: 60px;
+}
+
+.contacts-top {
+    transition: all .5s ease;
+    margin-top: -100px;
+    height: 100px;
+    background-color: @cream;
+    border-bottom: 1px solid @brown-light;
 }

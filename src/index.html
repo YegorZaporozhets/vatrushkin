@@ -11,82 +11,88 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <header>
-    <div class="heading">
-        <div class="heading__wrap">
-          <ul class="menu">
-            <li class="menu__item"><a href="#">Главная</a></li>
-            <li class="menu__item"><a href="#">О нас</a></li>
-          </ul>
-          <ul class="menu">
-            <li class="menu__item"><a href="#">Продукция</a></li>
-            <li class="menu__item"><a href="#">Контакты</a></li>
-          </ul>
-        </div>
-    </div>
-    <div class="logo">
-      <a href="#"><img src="../img/logo640.png" alt="Ватрушкин"></a>
-    </div>
-    <h2 class="slogan">
-      Каждый имеет право на сладкую жизнь!
-    </h2>
-    <div class="button-wrap">
-      <div class="button">
-        <span>Подробнее</span>
+  <div id="contactsBlock" class="contacts-top">
+
+  </div>
+  <div class="page">
+    <header>
+      <div class="logo">
+        <a href="#"><img src="../img/logo640.png" alt="Ватрушкин"></a>
       </div>
-    </div>
-  </header>
-  <section class="about-us">
-    <div class="container">
-      <h1 class="section-title">
-        О нас
-      </h1>
-      <div class="advantages">
-        <div class="feature">
-          <div class="feature__icon">
-
+      <div class="heading">
+          <div class="heading__wrap">
+            <ul class="menu">
+              <li class="menu__item"><a href="#">Главная</a></li>
+              <li class="menu__item"><a data-go-to="about-us" href="#">О нас</a></li>
+            </ul>
+            <ul class="menu">
+              <li class="menu__item"><a href="#">Продукция</a></li>
+              <li id="openContacts" class="menu__item"><a href="#">Контакты</a></li>
+            </ul>
           </div>
-          <div class="feature__title">
-            Качество
-          </div>
-          <div class="feature__discription">
-            Мы следим за качеством и бла бла бла, бла бла бла, вот так вот. И еще вот.
-          </div>
-        </div>
-        <div class="feature">
-          <div class="feature__icon">
-
-          </div>
-          <div class="feature__title">
-            Качество
-          </div>
-          <div class="feature__discription">
-            Мы следим за качеством и бла бла бла, бла бла бла, вот так вот. И еще вот.
-          </div>
-        </div>
-        <div class="feature">
-          <div class="feature__icon">
-
-          </div>
-          <div class="feature__title">
-            Качество
-          </div>
-          <div class="feature__discription">
-            Мы следим за качеством и бла бла бла, бла бла бла, вот так вот. И еще вот.
-          </div>
+      </div>
+      <h2 class="slogan">
+        Каждый имеет право на сладкую жизнь!
+      </h2>
+      <div class="button-wrap">
+        <div data-go-to="about-us" class="button">
+          <span data-go-to="about-us">Подробнее</span>
         </div>
       </div>
-    </div>
-  </section>
-  <footer>
-    <div class="container">
-      <div class="footing-top">
+    </header>
+    <section class="about-us">
+      <div class="container">
+        <h1 class="section-title">
+          О нас
+        </h1>
+        <div class="advantages">
+          <div class="feature">
+            <div class="feature__icon">
 
-      </div>
-      <div class="footing-bottom">
+            </div>
+            <div class="feature__title">
+              Качество
+            </div>
+            <div class="feature__discription">
+              Мы следим за качеством и бла бла бла, бла бла бла, вот так вот. И еще вот.
+            </div>
+          </div>
+          <div class="feature">
+            <div class="feature__icon">
 
+            </div>
+            <div class="feature__title">
+              Качество
+            </div>
+            <div class="feature__discription">
+              Мы следим за качеством и бла бла бла, бла бла бла, вот так вот. И еще вот.
+            </div>
+          </div>
+          <div class="feature">
+            <div class="feature__icon">
+
+            </div>
+            <div class="feature__title">
+              Качество
+            </div>
+            <div class="feature__discription">
+              Мы следим за качеством и бла бла бла, бла бла бла, вот так вот. И еще вот.
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </footer>
+    </section>
+    <footer>
+      <div class="container">
+        <div class="footing-top">
+
+        </div>
+        <div class="footing-bottom">
+
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="js/scripts.js"></script>
 </body>
 </html>
