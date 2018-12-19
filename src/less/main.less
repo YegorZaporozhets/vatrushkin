@@ -59,6 +59,7 @@ header {
         }
 
         &:hover {
+            transition: all .1s ease;
             border-bottom: 2px solid black;
         }
     }
@@ -124,11 +125,13 @@ header {
     border-radius: 10rem;
     width: 22.5rem;
     height: 7rem;
+    transition: all .5s ease;
 
     &:hover {
         cursor: pointer;
         background: @oranger;
         color: @black;
+        transform: scale(1.05);
     }
 
     &_secondary {
@@ -194,9 +197,44 @@ footer {
 }
 
 .contacts-top {
+    display: flex;
+    align-items: center;
     transition: all .5s ease;
     margin-top: -100px;
     height: 100px;
     background-color: @cream;
     border-bottom: 1px solid @brown-light;
+
+    &__address,
+    &__phone {
+        font-size: 2.4rem;
+        color: #000;
+    }
+
+    &__close {
+        position: absolute;
+        right: 1.5rem;
+        width: 2rem;
+        & img {
+            max-width: 100%;
+        }
+
+        &:hover {
+            cursor: pointer;
+            opacity: .8;
+            transform: scale(1.1) rotate(90deg);
+            transition: all .5s ease;
+        }
+        &:not(:hover) {
+            transform: scale(1) rotate(-90deg);
+            transition: all .5s ease;
+        }
+    }
+}
+
+.contacts-wrap {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
 }

@@ -13,6 +13,14 @@ contactsKey.addEventListener('click', () => {
     }
 });
 
+contactsDiv.addEventListener('click', event => {
+    const target = event.target.closest('div');
+
+    if (!target.dataset.closePanel) return;
+
+    contactsDiv.style.marginTop = '-100px';
+});
+
 header.addEventListener('click', event => {
     event.preventDefault();
 
@@ -22,14 +30,9 @@ header.addEventListener('click', event => {
         return;
     }
 
-    // if (target.tagName !== 'A') {
-    //     return;
-    // }
-
     const goTo = target.dataset.goTo;
-    console.log('.' + goTo);
     const elementToScroll = document.querySelector(`.${goTo}`);
     const top = elementToScroll.getBoundingClientRect().top;
 
-    window.scrollTo({top, behavior: 'smooth'});
+    window.scrollBy({top, behavior: 'smooth'});
 });
